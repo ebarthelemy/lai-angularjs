@@ -1,8 +1,8 @@
 {
   "name": "lai-angularjs",
-  "description": "A starter project for an AngularJS App using a Laravel API and implementing the Laravel out of the box authentication.",
+  "description": "LAI (Laravel, AngularJS & Ionic) Project Starter, AngularJS Part.",
   "version": "0.0.0",
-  "homepage": "https://github.com/ebarthelemy/my-project-angular",
+  "homepage": "https://github.com/ebarthelemy/lai-angularjs",
   "license": "MIT",
   "private": true,
   "dependencies": {
