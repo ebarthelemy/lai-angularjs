@@ -1,0 +1,22 @@
+{
+  "name": "lai-angularjs",
+  "description": "A starter project for an AngularJS App using a Laravel API and implementing the Laravel out of the box authentication.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ebarthelemy/my-project-angular",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.5.2",
+    "jquery": "^2.2.2",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0",
+    "lato-webfont": "^1.1.2",
+    "angular-ui-router": "^0.2.18",
+    "angular-auto-validate": "^1.19.3",
+    "ladda": "^1.0.0",
+    "angular-ladda": "^0.3.4"
+  },
+  "resolutions": {
+    "ladda": "^1.0.0"
+  }
+}

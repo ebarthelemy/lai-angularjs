@@ -1,0 +1,53 @@
+<div class="container" ng-controller="PasswordEmailCtrl">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Reset Password</div>
+                <div class="panel-body">
+                    <div class="alert alert-success" ng-if="Session.hasOwnProperty('status')">
+                        {{ Successes.status }}
+                    </div>
+
+                    <form class="form-horizontal"
+                          role="form"
+                          ng-submit="onSubmit()"
+                          novalidate="novalidate"
+                          ng-hide="submitted">
+
+                        <!-- {!! csrf_field() !!} -->
+
+                        <div class="form-group" ng-class="(Errors.hasOwnProperty('email')) ? 'has-error' : ''">
+                            <label class="col-md-4 control-label">E-Mail Address</label>
+
+                            <div class="col-md-6">
+                                <input type="email"
+                                       class="form-control"
+                                       ng-model="formModel.email"
+                                       id="email"
+                                       required="required"
+                                       ng-maxlength="255">
+
+                                <span class="help-block" ng-if="Errors.hasOwnProperty('email')">
+                                    <strong>{{ Errors.email }}</strong>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button class="btn btn-primary"
+                                        ladda="submitting"
+                                        data-style="expand-right"
+                                        type="submit">
+                                    <i class="fa fa-btn fa-envelope"></i>
+                                    <span ng-show="submitting">Sending Password Reset Link</span>
+                                    <span ng-show="!submitting">Send Password Reset Link</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

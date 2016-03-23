@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <title>My AngularJS App</title>
+
+    <!-- Fonts -->
+    <link rel='stylesheet' href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel='stylesheet' href="libs/lato-webfont/css/lato-webfont.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/ladda/dist/ladda-themeless.min.css">
+    <link rel="stylesheet" href="app.css">
+
+    <style>
+        body {
+            font-family: 'Lato';
+        }
+
+        .fa-btn {
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body ng-controller="MainCtrl">
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+
+            <!-- Collapsed Hamburger -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#app-navbar-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Branding Image -->
+            <a class="navbar-brand" href="#/">
+                Laravel
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+            <!-- Left Side Of Navbar -->
+            <ul class="nav navbar-nav">
+                <li><a href="#/home">Home</a></li>
+            </ul>
+
+            <!-- Right Side Of Navbar -->
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Authentication Links -->
+                <li ng-if="!Auth.loggedIn"><a href="#/login">Login</a></li>
+                <li ng-if="!Auth.loggedIn"><a href="#/register">Register</a></li>
+
+                <li class="dropdown" ng-if="Auth.loggedIn">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        {{ Auth.user.name }} <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#/logout"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div ui-view="main"></div>
+
+<!-- JavaScripts -->
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="libs/angular-auto-validate/dist/jcs-auto-validate.min.js"></script>
+<script src="libs/ladda/dist/spin.min.js"></script>
+<script src="libs/ladda/dist/ladda.min.js"></script>
+<script src="libs/angular-ladda/dist/angular-ladda.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
